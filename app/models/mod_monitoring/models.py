@@ -1,5 +1,5 @@
 from pynamodb.models import Model
-from pynamodb.attributes import UnicodeAttribute, UTCDateTimeAttribute
+from pynamodb.attributes import UnicodeAttribute, UTCDateTimeAttribute, NumberAttribute
 import uuid
 
 
@@ -12,3 +12,4 @@ class ParkingTransaction(Model):
     transaction_id = UnicodeAttribute(
         hash_key=True, default=lambda: str(uuid.uuid1())[:8].upper())
     transaction_datetime = UTCDateTimeAttribute(range_key=True)
+    type = NumberAttribute()

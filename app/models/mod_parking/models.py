@@ -1,5 +1,5 @@
 from pynamodb.models import Model
-from pynamodb.attributes import UnicodeAttribute, NumberAttribute
+from pynamodb.attributes import UnicodeAttribute, NumberAttribute, DynamicMapAttribute
 
 
 class EntryPoint(Model):
@@ -19,3 +19,4 @@ class ParkingSlot(Model):
     slot_id = UnicodeAttribute(hash_key=True)
     size = UnicodeAttribute(range_key=True)
     status = NumberAttribute()
+    distance_map = UnicodeAttribute()
