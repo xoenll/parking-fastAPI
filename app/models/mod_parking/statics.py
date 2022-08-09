@@ -6,7 +6,7 @@ class EntryStatus:
     OPEN = 1
 
 
-class SlotStatus:
+class SlotStatus(Enum):
     FREE = 0
     OCCUPIED = 1
     RESERVED = 2

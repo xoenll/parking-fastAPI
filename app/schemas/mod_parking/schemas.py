@@ -21,3 +21,10 @@ class ParkingSlotSchema(BaseModel):
 
 class ParkingMapSchema(BaseModel):
     parking_slots: List[ParkingSlotSchema]
+
+
+class ParkingEntrySchema(BaseModel):
+    entry_id: str
+    plate_id: str
+    size: str
+    time: str
